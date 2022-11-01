@@ -17,12 +17,23 @@
   color: #61dafb;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .review-box {
   margin: auto;
   margin-bottom: 24px;
-  width: 500px;
+  width: 300px;
   border: 4px solid;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .review-box {
+    width: 500px;
+  }
 }
 
 .review-image {
