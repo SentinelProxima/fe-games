@@ -23,13 +23,8 @@ a:link, a:visited {
   min-height: 10vh;
   background-color: #88cc00;
   display: flex;
-}
-
-@media (max-width: 600px) {
-  .nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 .nav-item {
