@@ -11,7 +11,6 @@ const Dashboard = (props) => {
             setReviews(data.reviews);
         })
     }, []);
-    console.log(cat)
     return (
     <ul>
         {reviews.filter((item) => item.category === cat || !cat).map((item) => (
