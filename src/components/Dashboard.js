@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Dashboard = (props) => {
+    const { cat } = useParams();
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('https://pacific-citadel-03998.herokuapp.com/api/reviews')
@@ -9,9 +11,10 @@ const Dashboard = (props) => {
             setReviews(data.reviews);
         })
     }, []);
+    console.log(cat)
     return (
     <ul>
-        {reviews.map((item) => (
+        {reviews.filter((item) => item.category === cat || !cat).map((item) => (
             <li key={item.title} class="review-box">
                 <img className="review-image" src={item.review_img_url} alt={item.title}/>
                 <p>{item.title}</p>
