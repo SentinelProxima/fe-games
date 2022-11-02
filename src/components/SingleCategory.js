@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Dashboard = (props) => {
+const SingleCategory = (props) => {
     const [reviews, setReviews] = useState([]);
+    const { cat } = useParams();
     useEffect(() => {
-        fetch('https://pacific-citadel-03998.herokuapp.com/api/reviews')
+        fetch(`https://pacific-citadel-03998.herokuapp.com/api/reviews?category=${cat}`)
         .then(res => res.json())
         .then((data) => {
             setReviews(data.reviews);
         })
-    }, []);
+    }, [cat]);
     return (
     <ul>
         {reviews.map((item) => (
@@ -24,4 +26,4 @@ const Dashboard = (props) => {
     );
 }
 
-export default Dashboard;
+export default SingleCategory;

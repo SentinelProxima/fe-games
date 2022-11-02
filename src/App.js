@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
+import SingleCategory from './components/SingleCategory';
 import Nav from './components/Nav';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Nav/>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
-          <Route path="/reviews/:cat" element={<Dashboard/>}/>
+          <Route path="/reviews/:cat" element={<SingleCategory/>}/>
         </Routes>
       </div>
     </BrowserRouter>
