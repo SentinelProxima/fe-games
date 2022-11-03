@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { fetchReview } from "../utils/api";
 
 const SingleCategory = (props) => {
     const [review, setReview] = useState([]);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`https://pacific-citadel-03998.herokuapp.com/api/reviews/${id}`)
-        .then(res => res.json())
-        .then((data) => {
-            setReview(data.review);
-        })
+        fetchReview(id).then((data) => setReview(data.review));
     }, [id]);
     return (
     <ul>
