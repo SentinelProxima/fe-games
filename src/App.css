@@ -40,7 +40,7 @@ ul {
   padding: 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1366px) {
   ul {
     margin-left: 10vw;
     margin-right: 10vw;
