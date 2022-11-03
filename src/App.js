@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import SingleCategory from './components/SingleCategory';
+import SingleReview from './components/SingleReview';
 import Nav from './components/Nav';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/reviews/:cat" element={<SingleCategory/>}/>
+          <Route path="/review/:id" element={<SingleReview/>}/>
         </Routes>
       </div>
     </BrowserRouter>

@@ -61,6 +61,10 @@ ul {
   font-style: italic;
 }
 
+.review-link {
+  padding-bottom: 10px;
+}
+
 .review-text {
   padding: 20px;
 }
