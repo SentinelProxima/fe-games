@@ -7,7 +7,6 @@ const VoteBox = (props) => {
     const handleVoting = (num) => {
         setCurrentVotes((likes) => likes + num);
         setUserVote((userLike) => userLike + num);
-        console.log(userVote);
         patchReview(props.id, num);
     }
     return (
