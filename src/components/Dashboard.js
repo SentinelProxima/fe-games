@@ -9,8 +9,8 @@ const Dashboard = (props) => {
     }, []);
     return (
     <ul>
-        {reviews.map((item, index) => (
-            <ReviewBox key={index} title={item.title} review_img_url={item.review_img_url} designer={item.designer} review_id={item.review_id}/>
+        {reviews.map((item) => (
+            <ReviewBox key={item.review_id} review={item}/>
         ))}
     </ul>
     );
