@@ -34,10 +34,20 @@ a:link, a:visited {
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 0;
 }
 
-.review-box {
+@media only screen and (min-width: 1366px) {
+  ul {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+.review-box, .single-review {
   margin: auto;
   margin-bottom: 24px;
   width: 300px;
@@ -49,11 +59,20 @@ ul {
   .review-box {
     width: 500px;
   }
+  .single-review {
+    width: 66vw;
+  }
 }
 
-.review-image {
+.review-box > .review-image {
   margin-top: 24px;
   width: 80%;
+  border: 8px solid;
+}
+
+.single-review > .review-image {
+  margin-top: 24px;
+  width: 50%;
   border: 8px solid;
 }
 
@@ -67,4 +86,15 @@ ul {
 
 .review-text {
   padding: 20px;
+}
+
+.vote, .vote1, .vote0, .vote-1 {
+  display: inline;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.vote1 {
+  color: green;
 }
