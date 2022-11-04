@@ -11,11 +11,11 @@ const Nav = (props) => {
         })
     }, []);
     return (
-        <div class="nav">
+        <div className="nav">
             <Link to="/">all</Link>
-            {cats.map((item) => (
-                <Link to={`/reviews/${item.slug}`}>
-                <p class="nav-item">{item.slug}</p>
+            {cats.map((item, index) => (
+                <Link key={index} to={`/reviews/${item.slug}`}>
+                <p className="nav-item">{item.slug}</p>
                 </Link>
             ))}
         </div>
